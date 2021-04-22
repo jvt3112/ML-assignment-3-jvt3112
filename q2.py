@@ -11,10 +11,10 @@ np.random.seed(42)
 from sklearn.datasets import load_breast_cancer
 
 
-def __sigmoid(z):
+def sigmoid(z):
         return 1/(1+np.exp(-z))
 def predictEstimates(X,theta):
-        return __sigmoid(X.dot(theta[1:])+theta[0])
+        return sigmoid(X.dot(theta[1:])+theta[0])
     
 def predict(X,theta):
     return np.where(predictEstimates(X,theta)>0.5,1,0)
