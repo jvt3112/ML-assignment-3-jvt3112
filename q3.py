@@ -76,7 +76,8 @@ matrix = confusion_matrix(y, yHat)
 print(matrix)
 
 disp = ConfusionMatrixDisplay(confusion_matrix=matrix, display_labels=np.array([0,1,2,3,4,5,6,7,8,9]))
-disp.plot() 
+disp.plot()
+plt.savefig('q3_c_ConfusionMatrix.png') 
 plt.show()
 
 print('\n----------PCA Analysis------------')
